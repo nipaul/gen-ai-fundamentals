@@ -58,17 +58,7 @@ jupyter lab
 
 ## What the notebook demonstrates
 
-- Cell 1: Installs dependencies (if needed) using notebook magic commands.
-- Cell 2 (T5 example):
-	- Loads `t5-small` tokenizer and `T5ForConditionalGeneration` model.
-	- Tokenizes the short input `"Home"` and gets `input_ids`.
-	- Uses `model.shared(input_ids)` to access the shared token embedding layer and prints the input IDs and resulting embedding tensor.
-- Cell 3: A short markdown note separating the examples.
-- Cell 4 (BERT example):
-	- Loads `bert-base-uncased` tokenizer and `AutoModel` (BERT encoder).
-	- Tokenizes the same input and runs the model to obtain token-level outputs (a BaseModelOutput that contains `last_hidden_state` and other fields).
-
-These examples show two common ways to access embeddings:
+Two examples of common ways to access embeddings:
 - Using a model's embedding layer directly (T5's `shared`) — returns the embedding vectors for each token id.
 - Running the encoder (BERT) — returns contextual token embeddings in `outputs.last_hidden_state`.
 
@@ -138,9 +128,4 @@ print('token_embeddings.shape =', token_embeddings.shape)
 This repository includes an MIT `LICENSE` file.
 
 ---
-
-If you'd like, I can:
-- add a `requirements.txt` with exact versions found working in my environment,
-- implement a small `pretty_print_token_information` helper into `01.ipynb` and run the notebook to verify execution,
-- or add a standalone script that runs the same examples outside Jupyter.
 
