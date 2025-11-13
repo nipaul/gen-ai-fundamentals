@@ -1,0 +1,4 @@
+python-dotenv
+transformers>=4.34.0
+torch>=2.2.0
+sentencepiece>=0.1.99
